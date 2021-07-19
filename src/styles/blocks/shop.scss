@@ -1,0 +1,109 @@
+.shop {
+
+  .header {
+    grid-template-rows: repeat(2,auto);
+
+    &__title {
+      margin-bottom: 20px;
+      grid-row: 1;
+      @include h2;
+      color: $dark-green;
+    }
+
+    &__menu {
+      margin-bottom: 85px;
+      grid-row: 2;
+
+      .menu__item {
+        @include text-menu;
+        color: $another-grey;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 20px;
+        transition: color, border-bottom 0.3s;
+
+        &:hover {
+          color: $black;
+          border-bottom: 1px solid $black;
+        }
+
+        &:active {
+          color: $black;
+          border-bottom: 1px solid $black;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    margin-bottom: 130px;
+  
+    .card {
+      width: 100%;
+
+      &:nth-child(4) {
+        width: 135%;
+      }
+
+      &__image {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      &__name {
+        margin-bottom: 10px;
+        @include text-price;
+        font-size: 20px;
+        color: $black;
+        text-decoration-line: none;
+      }
+
+      &__price {
+        @include text-price;
+        color: $black;
+        text-decoration-line: none;
+      }
+    }
+  }
+
+  &__buttons {
+
+    .arrows {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .arrow {
+        color: $black;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:nth-child(1) {
+          transform: scale(-1, 1);
+        }
+
+        &:hover {
+          color: #828282;
+        }
+      }
+    }
+
+    .button-all {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      background-color: $black;
+      @include text-button;
+      color: $light-grey;
+      border: 1px solid $black;
+      transition: background-color, color 0.3s ease;
+
+      &:hover {
+        background-color: $mercury;
+        color: $black;
+      }
+    }
+  }
+}

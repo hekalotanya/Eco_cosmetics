@@ -1,0 +1,68 @@
+.contact-us {
+
+  &__info {
+
+    .info__title {
+      margin-bottom: 20px;
+      @include h2;
+      color: $dark-green;
+    }
+
+    .info__subtitle {
+      margin-bottom: 20px;
+      @include h4;
+      text-transform: lowercase;
+    }
+
+    .info__form {
+
+      .input {
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        width: 100%;
+        @include text;
+        border: none;
+        color: $another-grey;
+        border-bottom: 1px solid $grey;
+        background-color: transparent;
+        transition: border-bottom 0.3s;
+
+        &:focus {
+          border-bottom: 1px solid $black;
+        }
+
+        &:valid {
+          color: $dark-green;
+          border-bottom: 1px solid $dark-green;
+        }
+
+        &:invalid {
+          color: #eb5757;
+          border-bottom: 1px solid #eb5757 ;
+        }
+      }
+
+      .input--submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        background-color: $black;
+        @include text-button;
+        color: $light-grey;
+        border-bottom: 1px solid $black;
+        transition: background-color, color 0.3s ease;
+
+        &:hover {
+          background-color: $mercury;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+}

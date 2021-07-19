@@ -1,0 +1,33 @@
+.gifts {
+
+  &__block:nth-child(1) {
+    @include text;
+    color: $black;
+
+    &::before {
+      margin-left: -130px;
+      margin-bottom: 100px;
+      display: block;
+      content: "";
+      height: 1px;
+      background-color: $green;
+      width: calc(100% + 130px);
+    }
+  }
+
+  &__block:nth-child(2) {
+    margin-top: 100px;
+    @include h4;
+    color: $dark-green;
+
+    &::after {
+      margin-right: -130px;
+      margin-top: 100px;
+      display: block;
+      content: "";
+      height: 1px;
+      background-color: $green;
+      width: calc(100% + 130px);
+    }
+  }
+}

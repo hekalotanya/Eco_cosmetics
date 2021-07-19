@@ -1,0 +1,55 @@
+.footer {
+  background-color: rgba(52, 79, 16, 0.5);
+  padding: 60px 130px 70px;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .links__menu {
+      margin-bottom: 150px;
+      
+      .item {
+        @include text-menu;
+        color: $back-color;
+        text-decoration-line: none;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s;
+        padding-bottom: 12px;
+
+        &:hover {
+          border-bottom: 1px solid $back-color;
+        }
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+
+    .copyright {
+      @include text-price;
+      color: $back-color;
+      // white-space: nowrap;
+    }
+  }
+
+  &__information {
+
+    .information__item {
+      display: block;
+      @include text-menu;
+      color: $back-color;
+      margin-bottom: 20px;
+      text-decoration-line: none;
+    }
+
+    .icon__links {
+
+      .link:nth-child(1) {
+        margin-right: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.page {
+  padding: 40px 130px 0;
+  @include text;
+  background-color: $back-color;
+
+  &__main {
+    margin-top: 95px;
+  }
+}
