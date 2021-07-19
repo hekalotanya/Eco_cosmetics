@@ -1,0 +1,87 @@
+.content {
+  margin-top: 75px;
+
+  &__title {
+    margin-bottom: 30px;
+    @include h3;
+    color: $dark-green;
+  }
+
+  &__menu-list {
+    margin-bottom: 70px;
+
+    .menu-list__item {
+      @include text-uppercase;
+      color: $another-grey;
+
+      &:nth-child(1) {
+        color: $black;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $black;
+        width: max-content;
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(2,auto);
+    column-gap: 20px;
+
+    .form-block {
+      grid-row: 1;
+      margin-bottom: 50px;
+
+      .input {
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        width: 100%;
+        @include text;
+        border: none;
+        color: $another-grey;
+        border-bottom: 1px solid $grey;
+        background-color: transparent;
+        transition: border-bottom 0.3s;
+
+        &:focus {
+          border-bottom: 1px solid $black;
+        }
+
+        &:valid {
+          color: $dark-green;
+          border-bottom: 1px solid $dark-green;
+        }
+
+        &:invalid {
+          color: #eb5757;
+          border-bottom: 1px solid #eb5757 ;
+        }
+      }
+    }
+
+    .form__button-submit {
+      grid-row: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      background-color: $black;
+      @include text-button;
+      color: $light-grey;
+      border-bottom: 1px solid $black;
+      transition: background-color, color 0.3s ease;
+
+      &:hover {
+        background-color: $mercury;
+        color: $black;
+      }
+    }
+  }
+}
