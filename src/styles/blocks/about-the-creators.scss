@@ -2,6 +2,10 @@
 
   &__info {
 
+    @include Tablet {
+      grid-column: 1 / 4;
+    }
+
     .info__title {
       margin-bottom: 20px;
       @include h2;
@@ -44,6 +48,7 @@
 
       .button__link {
         @include text-button;
+        width: 100%;
         line-height: 60px;
         color: $light-grey;
         text-decoration-line: none;
@@ -62,5 +67,9 @@
 
   &__image {
     width: 100%;
+
+    @include Tablet {
+      grid-column: 4 / 7;
+    }
   }
 }

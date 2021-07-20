@@ -8,11 +8,21 @@
       grid-row: 1;
       @include h2;
       color: $dark-green;
+
+      @include Tablet {
+        grid-column: 1 / 1;
+      }
     }
 
     &__menu {
       margin-bottom: 85px;
       grid-row: 2;
+
+      @include Tablet {
+        display: flex;
+        grid-column: 1 / 5;
+        margin-bottom: 20px;
+      }
 
       .menu__item {
         @include text-menu;
@@ -20,7 +30,7 @@
         text-transform: uppercase;
         border-bottom: 1px solid transparent;
         padding-bottom: 20px;
-        transition: color, border-bottom 0.3s;
+        transition: color, border-bottom 0.3s, 0.3s;
 
         &:hover {
           color: $black;
@@ -40,9 +50,28 @@
   
     .card {
       width: 100%;
+      text-decoration-line: none;
+
+      &:nth-child(2) {
+
+        @include Tablet {
+          grid-column: 1 / 4;
+        }
+      }
+
+      &:nth-child(3) {
+
+        @include Tablet {
+          grid-column: 4 / 7;
+        }
+      }
 
       &:nth-child(4) {
         width: 135%;
+
+        @include Tablet {
+          display: none;
+        }
       }
 
       &__image {
@@ -55,23 +84,31 @@
         @include text-price;
         font-size: 20px;
         color: $black;
-        text-decoration-line: none;
       }
 
       &__price {
         @include text-price;
         color: $black;
-        text-decoration-line: none;
       }
     }
   }
 
   &__buttons {
 
+    @include Tablet {
+      grid-template-rows: repeat(2, auto);
+    }
+
     .arrows {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include Tablet {
+        grid-row: 1;
+        grid-column: 7 / 7;
+        margin-bottom: 30px;
+      }
 
       .arrow {
         color: $black;
@@ -98,7 +135,12 @@
       @include text-button;
       color: $light-grey;
       border: 1px solid $black;
-      transition: background-color, color 0.3s ease;
+      transition: background-color, color 0.3s, 0.3s;
+
+      @include Tablet {
+        grid-row: 2;
+        grid-column: 3 / 5;
+      }
 
       &:hover {
         background-color: $mercury;

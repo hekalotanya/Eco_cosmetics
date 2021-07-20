@@ -6,8 +6,21 @@ html {
   padding: 40px 130px 0;
   @include text;
   background-color: $back-color;
+  overflow-x: hidden;
+
+  @include Notebook {
+    padding: 40px 40px 0;
+  }
+
+  @include Tablet {
+    padding: 25px 30px 0;
+  }
 
   &__main {
     margin-top: 95px;
+
+    @include Tablet {
+      margin-top: 30px;
+    }
   }
 }

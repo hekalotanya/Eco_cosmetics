@@ -3,10 +3,16 @@
   grid-template-columns: repeat(12,1fr);
   column-gap: 20px;
 
+  @include Tablet {
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 20px;
+  }
+
   @include Phone {
     grid-template-columns: repeat(2,1fr);
     column-gap: 10px;
   }
+
 
   &__item {
     @for $start from 1 through 12 {

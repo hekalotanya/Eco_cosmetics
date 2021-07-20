@@ -4,6 +4,10 @@
     @include text;
     color: $black;
 
+    @include Tablet {
+      display: none;
+    }
+
     &::before {
       margin-left: -130px;
       margin-bottom: 100px;
@@ -20,14 +24,25 @@
     @include h4;
     color: $dark-green;
 
+    @include Tablet {
+      grid-column: 2 / 6;
+      text-align: center;
+      justify-self: center;
+    }
+    
+
     &::after {
-      margin-right: -130px;
+      
       margin-top: 100px;
       display: block;
       content: "";
       height: 1px;
       background-color: $green;
       width: calc(100% + 130px);
+
+      @include Tablet {
+        display: none;
+      }
     }
   }
 }

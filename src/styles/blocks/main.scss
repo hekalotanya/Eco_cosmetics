@@ -1,10 +1,27 @@
 .main {
+
+  &__home {
+    margin-bottom: 200px;
+
+    @include Tablet {
+      margin-bottom: 100px;
+    }
+  }
+
   &__gifts {
     margin-bottom: 200px;
+
+    @include Tablet {
+      margin-bottom: 100px;
+    }
   }
 
   &__about {
     margin-bottom: 200px;
+
+    @include Tablet {
+      margin-bottom: 80px;
+    }
   }
 
   &__shop {
@@ -13,22 +30,39 @@
 
   &__about-the-creators {
     margin-bottom: 200px;
+    
+    @include Tablet {
+      margin-bottom: 100px;
+    }
   }
 
   &__powder {
     margin-bottom: 240px;
+
+    @include Tablet {
+      margin-bottom: 150px;
+    }
   }
 
   &__contact-us {
     margin-bottom: 200px;
   }
 
-  &__footer {
-    margin-left: -130px;
-    margin-right: -130px;
-  }
-
   &__product-info {
     margin-top: 70px;
+  }
+
+  &__hidden-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    padding: 30px;
+  
+    &:target {
+      transform: translateX(0);
+    }
   }
 }

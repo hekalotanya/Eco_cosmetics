@@ -31,14 +31,19 @@
           border-bottom: 1px solid $black;
         }
 
-        &:valid {
-          color: $dark-green;
-          border-bottom: 1px solid $dark-green;
-        }
-
-        &:invalid {
+        &:invalid:not(:focus):not(:placeholder-shown) {
           color: #eb5757;
           border-bottom: 1px solid #eb5757 ;
+        }
+
+        &:invalid:focus:not(:placeholder-shown) {
+          color: #eb5757;
+          border-bottom: 1px solid #eb5757 ;
+        }
+
+        &:valid:not(:placeholder-shown) {
+          color: $dark-green;
+          border-bottom: 1px solid $dark-green;
         }
       }
 
@@ -51,8 +56,8 @@
         background-color: $black;
         @include text-button;
         color: $light-grey;
-        border-bottom: 1px solid $black;
-        transition: background-color, color 0.3s ease;
+        border: 1px solid $black;
+        transition: background-color, color 0.3s, 0.3s;
 
         &:hover {
           background-color: $mercury;
