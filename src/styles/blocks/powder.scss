@@ -1,9 +1,19 @@
 .powder {
-  
+
   .info {
+
+    @include Phone {
+      grid-template-rows: repeat(3, auto);
+    }
 
     &__titles {
       margin-bottom: 210px;
+
+      @include Phone {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        margin-bottom: 30px;
+      }
 
       @include Tablet {
         grid-column: 1 / 4;
@@ -14,6 +24,12 @@
         color: $dark-green;
         margin-bottom: 220px;
         padding-top: 60px;
+
+        @include Phone {
+          margin-bottom: 0;
+          padding-top: 0;
+          width: 100%;
+        }
       }
 
       .link-learn {
@@ -23,6 +39,10 @@
         border-bottom: 1px solid transparent;
         transition: border-bottom 0.3s;
         padding-bottom: 12px;
+
+        @include Phone {
+          display: none;
+        }
 
         &:hover {
           border-bottom: 1px solid $dark-green;
@@ -34,6 +54,11 @@
       display: flex;
       flex-direction: column;
       margin-top: 35px;
+
+      @include Phone {
+        grid-column: 1 / 2;
+        grid-row: 2;
+      }
       
       @include Tablet {
         position: relative;
@@ -49,12 +74,26 @@
         &::after {
           content: "";
 
+          @include Phone {
+            height: 1px;
+            background-color: $black;
+            width: 50px;
+            margin-left: auto;
+          }
+
           @include Tablet {
             height: 1px;
             background-color: $black;
             width: 70px;
             margin-left: auto;
           }
+        }
+
+        @include Phone {
+          display: flex;
+          align-items: center;
+          text-align: start;
+          margin-right: -15px;
         }
 
         @include Tablet {
@@ -69,6 +108,10 @@
     .image__arrow {
       display: flex;
       flex-direction: column;
+
+      @include Phone {
+        display: none;
+      }
 
       @include Tablet {
         display: none;
@@ -101,20 +144,61 @@
       width: 100%;
       object-fit: cover;
 
+      @include Phone {
+        grid-column: 2 / 3;
+        grid-row: 2;
+        margin-left: -20px;
+        width: auto;
+      }
+
       @include Tablet {
         grid-column: 6 / 7;
         margin-left: -40px;
         width: auto;
       }
     }
+
+    .link-learn-phone {
+      display: none;
+
+      @include Phone {
+        margin-bottom: 60px;
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 3;
+        @include text-uppercase;
+        color: $dark-green;
+        text-decoration-line: none;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s;
+        padding-bottom: 12px;
+        width: max-content;
+
+        &:hover {
+          border-bottom: 1px solid $dark-green;
+        }
+      }
+    }
   }
 
   &__icons {
+
+    grid-template-rows: repeat(2,auto);
+
+    @include Phone {
+      grid-template-rows: repeat(6,auto);
+    }
     
     .icon {
       justify-self: center;
+      grid-row: 1;
 
       &:nth-child(1) {
+
+        @include Phone {
+          grid-column: 1 / 3;
+          grid-row: 1;
+        }
 
         @include Tablet {
           grid-column: 1 / 3;
@@ -123,12 +207,22 @@
 
       &:nth-child(2) {
 
+        @include Phone {
+          grid-column: 1 / 3;
+          grid-row: 3;
+        }
+
         @include Tablet {
           grid-column: 3 / 5;
         }
       }
 
       &:nth-child(3) {
+
+        @include Phone {
+          grid-column: 1 / 3;
+          grid-row: 5;
+        }
 
         @include Tablet {
           grid-column: 5 / 7;
@@ -146,35 +240,52 @@
         }
       }
     }
-  }
 
-  &__icon-signs {
-    
     .icon__sign {
       @include text-uppercase;
       color: black;
       justify-self: center;
       text-align: center;
+      grid-row: 2;
+
+      @include Phone {
+        margin-bottom: 70px;
+      }
+    }
+
+    .icon__sign--1 {
+
+      @include Phone {
+        grid-column: 1 / 3;
+        grid-row: 2;
+      }
+
+      @include Tablet {
+        grid-column: 1 / 3;
+      }
+    }
+
+    .icon__sign--2 {
+
+      @include Phone {
+        grid-column: 1 / 3;
+        grid-row: 4;
+      }
       
-      &:nth-child(1) {
+      @include Tablet {
+        grid-column: 3 / 5;
+      }
+    }
 
-        @include Tablet {
-          grid-column: 1 / 3;
-        }
+    .icon__sign--3 {
+
+      @include Phone {
+        grid-column: 1 / 3;
+        grid-row: 6;
       }
 
-      &:nth-child(2) {
-
-        @include Tablet {
-          grid-column: 3 / 5;
-        }
-      }
-
-      &:nth-child(3) {
-
-        @include Tablet {
-          grid-column: 5 / 7;
-        }
+      @include Tablet {
+        grid-column: 5 / 7;
       }
     }
   }

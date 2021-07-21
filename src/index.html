@@ -29,7 +29,8 @@
         <a href="#About" class="menu__item">About</a>
       </div>
       <div class="nav__button-shop button-shop grid__item--12-12">
-        <a href="checkout-shipping.html" class="button-shop__link"></a>
+        <a href="./checkout-shipping.html" class="button-shop__link"></a>
+        <a href="./checkout-payment.html" class="button-shop__link"></a>
       </div>
     </nav>
   </header>
@@ -225,6 +226,7 @@
             d="M0.868127 14.9007C144.779 -4.24441 227.726 -5.67655 381.133 14.9009L382 15.0172V15.892V82.392V83.392H381H372.927V113.892V114.892H371.927H356.736C356.665 115.265 356.575 115.759 356.477 116.352C356.244 117.762 355.965 119.724 355.778 121.934C355.402 126.399 355.423 131.708 356.853 135.543C358.377 139.631 362.229 143.997 365.818 147.406C367.594 149.094 369.273 150.517 370.508 151.517C371.125 152.017 371.63 152.411 371.979 152.679C372.154 152.813 372.29 152.916 372.382 152.984C372.427 153.018 372.462 153.044 372.485 153.061L372.51 153.08L372.516 153.084L372.517 153.085L372.518 153.085L372.927 153.385V153.892V179.392H381H382V180.392V339.892V340.892H381H372.927V376.892V377.704L372.132 377.871C246.233 404.27 165.765 404.311 11.5053 377.878L10.6742 377.735V376.892V340.892H1H0V339.892V180.392V179.392H1H10.6742V153.892V153.309L11.1811 153.022C12.0507 152.529 12.9427 152.046 13.8421 151.559C16.641 150.043 19.5119 148.489 22.0037 146.479C25.2419 143.867 27.716 140.572 28.2937 135.772L28.295 135.762L28.2965 135.751C29.2248 129.231 29.3604 124.772 28.3822 114.892H11.6742H10.6742V113.892V83.392H1H0V82.392V15.892V15.0162L0.868127 14.9007ZM12.6742 341.004C159.407 356.622 238.271 356.638 370.927 341.017V376.08C246.002 402.205 165.87 402.25 12.6742 376.049V341.004ZM30.3919 114.892H354.701C354.642 115.215 354.575 115.595 354.504 116.026C354.265 117.474 353.977 119.491 353.785 121.766C353.537 124.711 353.442 128.161 353.851 131.392H30.8237C31.2259 126.788 31.1232 122.337 30.3919 114.892ZM30.6199 133.392H354.178C354.382 134.388 354.645 135.346 354.979 136.241C356.675 140.791 360.828 145.426 364.44 148.856C366.264 150.589 367.984 152.047 369.248 153.071C369.881 153.584 370.4 153.989 370.763 154.267C370.822 154.312 370.877 154.354 370.927 154.392V180.017C231.559 186.785 152.512 186.269 12.6742 179.936V154.477C13.3184 154.119 13.9888 153.756 14.675 153.384L14.6774 153.383L14.6785 153.382C17.5097 151.85 20.6105 150.172 23.2593 148.036C26.7734 145.202 29.6184 141.476 30.278 136.022C30.4074 135.113 30.5215 134.243 30.6199 133.392ZM29.2865 112.892L355.916 112.892H370.927V83.3918H12.6742V112.892H29.2865L29.2865 112.892ZM11.6742 81.392L11.6742 81.3918L371.927 81.392H380V16.7669C227.641 -3.62274 144.94 -2.2095 2 16.7679V81.392H11.6742ZM11.6288 181.891L11.6515 181.392H2V338.892H11.6742H11.7274L11.7803 338.898C159.503 354.663 238.308 354.672 371.81 338.899L371.868 338.892H371.927H380V181.392H373.553L373.577 181.891C232.229 188.808 152.97 188.305 11.6288 181.891Z"
             fill="#344F10" />
         </svg>
+        <a class="link-learn-phone" href="#">learn more</a>
       </div>
       <div class="powder__icons grid">
         <div class="icon grid__item--2-3">
@@ -280,15 +282,13 @@
               stroke="#344F10" />
           </svg>
         </div>
-      </div>
-      <div class="powder__icon-signs grid">
-        <div class="icon__sign grid__item--1-4">
+        <div class="icon__sign icon__sign--1 grid__item--1-4">
           No synthetics and microplastics
         </div>
-        <div class="icon__sign grid__item--5-8">
+        <div class="icon__sign icon__sign--2 grid__item--5-8">
           product packaging can be recycled or reused
         </div>
-        <div class="icon__sign grid__item--9-12">
+        <div class="icon__sign icon__sign--3 grid__item--9-12">
           only natural ingredients
         </div>
       </div>
@@ -304,7 +304,7 @@
         <h4 class="info__subtitle">
           we will help you choose a product that suits you and answer your other questions
         </h4>
-        <form class="info__form" action="" method="POST">
+        <form class="info__form" method="POST">
           <input class="input" type="name" name="name" id="name " placeholder="Your Name" minlength="2" maxlength="30"
             autocomplete="off" required>
           <input class="input" type="email" name="email" id="email" placeholder="E-Mail" autocomplete="off"
@@ -313,7 +313,7 @@
             autocomplete="off" pattern="\d+" required>
           <input class="input" type="text" name="message" id="message" placeholder="Your Message" minlength="8"
             maxlength="30" autocomplete="off" required>
-          <input class="input--submit" type="submit" value="submit">
+          <input class="input--submit" type="submit" value="send a message">
         </form>
       </div>
       <img src="images/Contact-us.png" alt="contact" class="contact-us__image grid__item--8-12">
@@ -321,43 +321,54 @@
   </main>
   <!-- footer -->
   <footer class="page__footer footer grid">
-    <div class="footer__links links grid__item--1-3">
-      <div class="links__menu menu">
-        <a href="#Shop" class="item">Shop</a>
-        <a href="#Contact" class="item">Contact</a>
-        <a href="#About" class="item">About</a>
-      </div>
-      <div class="copyright">
-        Copyright &copy; 2019 witch of mountain winds
-      </div>
+    <div class="footer__menu menu grid__item--1-3">
+      <a href="#Shop" class="item">Shop</a>
+      <a href="#Contact" class="item">Contact</a>
+      <a href="#About" class="item">About</a>
     </div>
-    <div class="footer__information grid__item--8-12">
-      <div class="information__item">Ukraine</div>
-      <a href="mailto:support.mountain@gmail.com" class="information__item">
-        support.mountain@gmail.com
+    <div class="copyright grid__item--1-6">
+      Copyright &copy; 2019 witch of mountain winds
+    </div>  
+    <div class="
+      footer__item
+      footer__item--1
+      grid__item--8-11"
+    >
+      Ukraine
+    </div>
+    <a
+      href="mailto:support.mountain@gmail.com"
+      class="footer__item footer__item--2 grid__item--8-11"
+    >
+      support.mountain@gmail.com
+    </a>
+    <a
+      href="tel:+380934476839"
+      class="footer__item footer__item--3 grid__item--8-11"
+    >
+      +380934476839
+    </a>
+    <div class="
+      footer__item
+      footer__item--4
+      grid__item--8-11"
+    >
+      Support is available Monday - Friday 9am-6pm
+    </div>
+    <div class="icon__links grid__item--8-11">
+      <a href="#" class="link">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.3049 19.5H13.5184L13.5289 13.3531H15.4982C15.9736 13.3531 16.3738 12.9975 16.4298 12.5254L16.7028 10.2217C16.769 9.66371 16.3331 9.17313 15.7713 9.17313H13.5175V7.74602C13.5175 7.33044 13.5814 7.12024 13.678 7.00558C13.7583 6.91022 13.9534 6.77655 14.5134 6.77655H14.5136L15.6741 6.77602H15.6742C16.1919 6.7757 16.6117 6.35587 16.6117 5.83789V3.89537C16.6117 3.37721 16.1916 2.95724 15.6736 2.95724H13.7826C12.529 2.95724 11.4215 3.34156 10.626 4.12784C9.82889 4.91565 9.40054 6.0521 9.40054 7.44709V9.17308H8.04716C7.52767 9.17308 7.10705 9.59525 7.10904 10.1148V10.1148L7.11794 12.4185C7.11993 12.9352 7.53929 13.353 8.05601 13.353H9.41191L9.40135 19.4999H2.69504C1.48273 19.4999 0.5 18.5172 0.5 17.3049V2.69504C0.5 1.48274 1.48278 0.5 2.69504 0.5H17.3048C18.5171 0.5 19.4998 1.48273 19.4999 2.69504V17.305C19.4999 18.5173 18.5171 19.5 17.3049 19.5Z" stroke="#E4DFD3"/>
+        </svg>
       </a>
-      <a href="tel:+380934476839" class="information__item">+380934476839</a>
-      <div class="information__item">
-        Support is available Monday - Friday 9am-6pm
-      </div>
-      <div class="icon__links">
-        <a href="#" class="link">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="20" height="20" fill="#89946E" />
-            <path
-              d="M17.3049 19.5H13.5184L13.5289 13.3531H15.4982C15.9736 13.3531 16.3738 12.9975 16.4298 12.5254L16.7028 10.2217C16.769 9.66371 16.3331 9.17313 15.7713 9.17313H13.5175V7.74602C13.5175 7.33044 13.5814 7.12024 13.678 7.00558C13.7583 6.91022 13.9534 6.77655 14.5134 6.77655H14.5136L15.6741 6.77602H15.6742C16.1919 6.7757 16.6117 6.35587 16.6117 5.83789V3.89537C16.6117 3.37721 16.1916 2.95724 15.6736 2.95724H13.7826C12.529 2.95724 11.4215 3.34156 10.626 4.12784C9.82889 4.91565 9.40054 6.0521 9.40054 7.44709V9.17308H8.04716C7.52767 9.17308 7.10705 9.59525 7.10904 10.1148V10.1148L7.11794 12.4185C7.11993 12.9352 7.53929 13.353 8.05601 13.353H9.41191L9.40135 19.4999H2.69504C1.48273 19.4999 0.5 18.5172 0.5 17.3049V2.69504C0.5 1.48274 1.48278 0.5 2.69504 0.5H17.3048C18.5171 0.5 19.4998 1.48273 19.4999 2.69504V17.305C19.4999 18.5173 18.5171 19.5 17.3049 19.5Z"
-              stroke="#E4DFD3" />
-          </svg>
-        </a>
-        <a href="#" class="link">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="19" height="19" rx="4.5" stroke="#E4DFD3" />
-            <circle cx="10" cy="10" r="3.5" stroke="#E4DFD3" />
-            <circle cx="15.5" cy="4.5" r="1" stroke="#E4DFD3" />
-          </svg>
-        </a>
-      </div>
-    </div>
+      <a href="#" class="link">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" y="0.5" width="19" height="19" rx="4.5" stroke="#E4DFD3" />
+          <circle cx="10" cy="10" r="3.5" stroke="#E4DFD3" />
+          <circle cx="15.5" cy="4.5" r="1" stroke="#E4DFD3" />
+        </svg>
+      </a>
+    </div>  
   </footer>
   <script type="text/javascript" src="scripts/main.js"></script>
 </body>
