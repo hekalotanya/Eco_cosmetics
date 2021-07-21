@@ -15,6 +15,10 @@
       margin-bottom: 15px;
       @include h2;
       color: $dark-green;
+
+      @include Phone {
+        font-size: 24px;
+      }
     }
 
     &__text--p1 {
