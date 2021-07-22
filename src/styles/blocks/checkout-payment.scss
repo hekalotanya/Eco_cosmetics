@@ -31,48 +31,57 @@
         @include h5;
         color: $another-grey;
         justify-self: center;
+        text-decoration: none;
+      }
 
-        &:nth-child(2) {
-          color: $black;
-          padding-bottom: 12px;
+      .list__item--2 {
+        color: $black;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $black;
+        width: max-content;
+
+        @include Phone {
+          grid-column: 1 / 3;
+          justify-self: center;
+          border-bottom: none;
+        }
+
+        @include Tablet {
+          grid-column: 3 / 5;
+          justify-self: center;
+          border-bottom: none;
+        }
+      }
+
+      .list__item--1 {
+        width: 100%;
+        text-align: center;
+        color: $black;
+        padding-bottom: 12px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s;
+
+        &:hover {
           border-bottom: 1px solid $black;
-          width: max-content;
-
-          @include Phone {
-            grid-column: 1 / 3;
-            justify-self: center;
-            border-bottom: none;
-          }
-
-          @include Tablet {
-            grid-column: 3 / 5;
-            justify-self: center;
-            border-bottom: none;
-          }
         }
 
-        &:nth-child(1) {
-          width: 100%;
-          text-align: center;
-
-          @include Phone {
-            display: none;
-          }
-
-          @include Tablet {
-            display: none;
-          }
+        @include Phone {
+          display: none;
         }
 
-        &:nth-child(3) {
+        @include Tablet {
+          display: none;
+        }
+      }
 
-          @include Phone {
-            display: none;
-          }
+      .list__item--3 {
 
-          @include Tablet {
-            display: none;
-          }
+        @include Phone {
+          display: none;
+        }
+
+        @include Tablet {
+          display: none;
         }
       }
     }
@@ -99,6 +108,10 @@
     &__option-icons {
       margin-bottom: 50px;
 
+      @include Phone {
+        margin-bottom: 20px;
+      }
+
       .icon {
         justify-self: center;
         color: $black;
@@ -106,14 +119,11 @@
         &:hover {
           color: $dark-green;
         }
-      }
-
-      .icon {
 
         &:nth-child(1) {
 
           @include Phone {
-            grid-row: 1;
+            grid-row: 1  / 2;
             grid-column: 1 / 3;
             margin-bottom: 35px;
           }
@@ -126,6 +136,14 @@
         }
 
         &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .payment-icon {
+            margin-bottom: 10px;
+            width: 100%;
+          }
 
           @include Phone {
             grid-row: 2;
