@@ -1,0 +1,116 @@
+.main {
+
+  &__home {
+    margin-bottom: 200px;
+
+    @include Tablet {
+      margin-bottom: 100px;
+    }
+
+    @include Phone {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__gifts {
+    margin-bottom: 200px;
+
+    @include Phone {
+      margin-bottom: 60px;
+    }
+
+    @include Tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__about {
+    margin-bottom: 200px;
+
+    @include Phone {
+      margin-bottom: 60px;
+    }
+
+    @include Tablet {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__shop {
+    margin-bottom: 200px;
+
+    @include Phone {
+      margin-bottom: 60px;
+    }
+
+    @include Tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__about-the-creators {
+    margin-bottom: 200px;
+
+    @include Phone {
+      margin-bottom: 60px;
+    }
+
+    @include Tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__powder {
+    margin-bottom: 240px;
+
+    @include Phone {
+      margin-bottom: 60px;
+    }
+
+    @include Tablet {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__contact-us {
+    margin-bottom: 200px;
+
+    @include Phone {
+      margin-bottom: 60px;
+    }
+
+    @include Tablet {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__product-info {
+    margin-top: 70px;
+  }
+
+  &__hidden-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    padding: 40px 130px 0;
+
+    @include Notebook {
+      padding: 40px 40px 0;
+    }
+  
+    @include Tablet {
+      padding: 25px 30px 0;
+    }
+  
+    @include Phone {
+      padding: 15px 20px 0;
+    }
+  
+    &:target {
+      transform: translateX(0);
+    }
+  }
+}

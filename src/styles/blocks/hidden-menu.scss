@@ -1,0 +1,36 @@
+.hidden-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: $black;
+  height: 100vh;
+
+  &__icon {
+    margin-bottom: 100px;
+    width: max-content;
+    height: 50px;
+    line-height: 50px;
+
+    @include Phone {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &__list {
+    text-align: center;
+
+    .list__item {
+      margin-bottom: 50px;
+      border-bottom: 1px solid $back-color;
+      padding-bottom: 10px;
+
+      .link {
+        display: inline-block;
+        @include text-menu;
+        color: $back-color;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+}

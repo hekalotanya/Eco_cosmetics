@@ -1,0 +1,25 @@
+.vertical-sign {
+  @include text-uppercase;
+  color: rgba(52, 79, 16, 0.5);
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  text-align: end;
+  
+  &::before {
+    margin-bottom: 10px;
+    display: inline-block;
+    content: "";
+    background-color: rgba(52, 79, 16, 0.5);
+    height: 100px;
+    width: 1px;
+  }
+  
+  @include Phone {
+    display: none;
+  }
+
+  @include Tablet {
+    display: none;
+  }
+}

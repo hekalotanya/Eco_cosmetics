@@ -1,0 +1,93 @@
+$main-font: "Sharp_Sans", sans-serif;
+
+@mixin h1 {
+  font-family: $main-font;
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: bold;
+}
+
+@mixin h2 {
+  font-family: $main-font;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin h3 {
+  font-family: $main-font;
+  font-size: 36px;
+  line-height: 150%;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+@mixin h4 {
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin h5 {
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin text {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: normal;
+}
+
+@mixin text-uppercase {
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+@mixin text-uppercase-bold {
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin text-price {
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+@mixin text-menu {
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 130%;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+@mixin text-button {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: bold;
+}

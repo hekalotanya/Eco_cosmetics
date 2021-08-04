@@ -1,0 +1,40 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.page {
+  padding: 40px 130px 0;
+  @include text;
+  background-color: $back-color;
+  overflow-x: hidden;
+
+  @include Notebook {
+    padding: 40px 40px 0;
+  }
+
+  @include Tablet {
+    padding: 25px 30px 0;
+  }
+
+  @include Phone {
+    padding: 15px 20px 0;
+  }
+
+  &__main {
+    margin-top: 95px;
+
+    @include Phone {
+      margin-top: 10px;
+    }
+
+    @include Tablet {
+      margin-top: 30px;
+    }
+  }
+
+  &__footer {
+    margin-left: -130px;
+    margin-right: -130px;
+  }
+}
