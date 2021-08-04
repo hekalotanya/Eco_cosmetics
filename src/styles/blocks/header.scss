@@ -3,6 +3,7 @@
 
   &__menu-logo {
     display: none;
+    width: max-content;
 
     @include Phone {
       display: block;
@@ -40,6 +41,8 @@
 
     @include Phone {
       margin-right: 0;
+      width: 24px;
+      height: 24px;
     }
 
     @include Tablet {

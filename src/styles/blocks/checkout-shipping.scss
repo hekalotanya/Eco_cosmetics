@@ -3,6 +3,10 @@
   .content {
     margin-top: 75px;
 
+    @include Phone {
+      margin-top: 20px;
+    }
+
     &__title {
       margin-bottom: 30px;
       
@@ -166,6 +170,7 @@
       }
 
       .form__button-submit {
+        margin-bottom: 20px;
         grid-row: 2;
         display: flex;
         align-items: center;
@@ -175,6 +180,7 @@
         background-color: $black;
         @include text-button;
         text-decoration-line: none;
+        line-height: 60px;
         color: $light-grey;
         border: 1px solid $black;
         transition: background-color, color 0.3s ease;
